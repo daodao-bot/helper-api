@@ -1,0 +1,21 @@
+server:
+  port: ${SERVER_PORT:80}
+
+spring:
+  application:
+    name: ${APP_NAME:helper-api}
+
+  threads:
+    virtual:
+      enabled: true
+
+logging:
+  level:
+    root: info
+    web: info
+    sql: debug
+
+springdoc:
+  group-configs:
+    - group: default
+      paths-to-match: /api/**
